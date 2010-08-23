@@ -1,0 +1,6 @@
+C:\Development\TDWG\TDWG_RDF_copy\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\TDWG\TDWG_RDF_copy\bin\TDWG_RDF.dll
+C:\Development\TDWG\TDWG_RDF_copy\bin\TDWG_RDF.pdb
+C:\Development\TDWG\TDWG_RDF_copy\bin\SemWeb.dll
+C:\Development\TDWG\TDWG_RDF_copy\obj\Debug\TDWG_RDF.dll
+C:\Development\TDWG\TDWG_RDF_copy\obj\Debug\TDWG_RDF.pdb
