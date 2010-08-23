@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Obs!</string>
+    <string name="app_name">Obs</string>
+<string name="add_obs">New Obs</string>
+<string name="view_obs">View Obs</string>
+</resources>
