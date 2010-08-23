@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<request
+    xmlns="http://rs.tdwg.org/tapir/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://rs.tdwg.org/tapir/1.0 
+                        http://rs.tdwg.org/tapir/1.0/schema/tapir.xsd">
+  <header>
+    <source sendtime="[TIME]">
+      <software name="TDWGRDFBrowser" version="1.0"/>
+    </source>
+  </header>
+  <search count="true" start="0" limit="100" envelope="false">
+    <externalOutputModel location="http://rs.tdwg.org/ontology/voc/tapir/outputmodel/TaxonOccurrence/TaxonOccurrence.xml"/>
+    <filter>
+      [QUERY_FILTER]
+    </filter>
+  </search>
+</request>

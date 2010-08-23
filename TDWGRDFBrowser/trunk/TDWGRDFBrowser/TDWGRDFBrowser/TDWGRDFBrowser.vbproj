@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TDWGRDFBrowser.My.MyApplication</StartupObject>
+    <RootNamespace>TDWGRDFBrowser</RootNamespace>
+    <AssemblyName>TDWGRDFBrowser</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TDWGRDFBrowser.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TDWGRDFBrowser.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExpandableGridView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Include\ExpandableGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Eyefinder, Version=1.3.0.1, Culture=neutral, PublicKeyToken=75b7ec17dd7c14c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Include\Eyefinder.dll</HintPath>
+    </Reference>
+    <Reference Include="SemWeb, Version=0.5.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Include\SemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserControl.Designer.vb">
+      <DependentUpon>BrowserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BrowserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowserForm.Designer.vb">
+      <DependentUpon>BrowserForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComboItem.vb" />
+    <Compile Include="DataSourceControl.Designer.vb">
+      <DependentUpon>DataSourceControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataSourceControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailsControl.Designer.vb">
+      <DependentUpon>DetailsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailsForm.Designer.vb">
+      <DependentUpon>DetailsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HarvestControl.Designer.vb">
+      <DependentUpon>HarvestControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HarvestControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageForm.Designer.vb">
+      <DependentUpon>ImageForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImageForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericHTTPControl.Designer.vb">
+      <DependentUpon>GenericHTTPControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GenericHTTPControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OptionsControl.Designer.vb">
+      <DependentUpon>OptionsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RDFModelsControl.Designer.vb">
+      <DependentUpon>RDFModelsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RDFModelsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RDFModelsForm.Designer.vb">
+      <DependentUpon>RDFModelsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RDFModelsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDFSourceForm.Designer.vb">
+      <DependentUpon>RDFSourceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RDFSourceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResolveControl.Designer.vb">
+      <DependentUpon>ResolveControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResolveControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SearchControl.Designer.vb">
+      <DependentUpon>SearchControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForm.Designer.vb">
+      <DependentUpon>WebBrowserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSourceControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataSourceControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HarvestControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HarvestControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImageForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericHTTPControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GenericHTTPControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDFModelsControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RDFModelsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDFModelsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RDFModelsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDFSourceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RDFSourceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResolveControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResolveControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WebBrowserForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config.tmp" />
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.vbproj">
+      <Project>{B8C2587B-9337-4470-85F3-E4DB8A2344DD}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RDFClasses\RDFClasses.vbproj">
+      <Project>{AE93305B-155D-4714-A33F-8F72273DE91A}</Project>
+      <Name>RDFClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TDWGRDFBrowser", "TDWGRDFBrowser\TDWGRDFBrowser.vbproj", "{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataAccess", "DataAccess\DataAccess.vbproj", "{B8C2587B-9337-4470-85F3-E4DB8A2344DD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RDFClasses", "RDFClasses\RDFClasses.vbproj", "{AE93305B-155D-4714-A33F-8F72273DE91A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RDFBrowserSetup", "RDFBrowserSetup\RDFBrowserSetup.vdproj", "{4D828127-1DDE-48AB-99F7-365526446BA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C2587B-9337-4470-85F3-E4DB8A2344DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C2587B-9337-4470-85F3-E4DB8A2344DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C2587B-9337-4470-85F3-E4DB8A2344DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C2587B-9337-4470-85F3-E4DB8A2344DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE93305B-155D-4714-A33F-8F72273DE91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE93305B-155D-4714-A33F-8F72273DE91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE93305B-155D-4714-A33F-8F72273DE91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE93305B-155D-4714-A33F-8F72273DE91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D828127-1DDE-48AB-99F7-365526446BA3}.Debug|Any CPU.ActiveCfg = Debug
+		{4D828127-1DDE-48AB-99F7-365526446BA3}.Debug|Any CPU.Build.0 = Debug
+		{4D828127-1DDE-48AB-99F7-365526446BA3}.Release|Any CPU.ActiveCfg = Release
+		{4D828127-1DDE-48AB-99F7-365526446BA3}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
