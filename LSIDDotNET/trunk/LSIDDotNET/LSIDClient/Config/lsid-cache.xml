@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!--LSID CACHE CONFIGURATION-->
+<Settings>
+	<!--The maximum cache size in bytes, -1 means no limit-->
+	<max-cache-size>-1</max-cache-size>
+
+	<!--The maximum lifetime of a cached item in MILLIS, -1 means no limit-->
+	<max-cache-lifetime>-1</max-cache-lifetime>
+
+	<!--Whether or not to log cache activity-->
+	<logging-on>true</logging-on>
+
+	<!--Where to log to. -->
+	<log-file>lsid-cache.log</log-file>
+
+	<!--Should the cache mangle the case for non-case sensitive OS (Windows)-->
+	<!--0 - System,  1 - Yes,   -1 - No,  2 - SHA1-->
+	<mangle-case>0</mangle-case>
+</Settings>

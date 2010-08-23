@@ -1,0 +1,289 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{819F6E46-9726-4B23-91E1-A34B4F10358A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LSIDFramework</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LSIDFramework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/LSIDFramework/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DNSResolver">
+      <Name>DNSResolver</Name>
+      <HintPath>..\Include\DNSResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2">
+      <Name>Microsoft.Web.Services2</Name>
+      <HintPath>C:\Program Files\Microsoft WSE\v2.0\Microsoft.Web.Services2.dll</HintPath>
+      <AssemblyFolderKey>hklm\microsoft wse 2.0</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Messaging">
+      <Name>System.Messaging</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\LSIDClient\LSIDClient.csproj">
+      <Name>LSIDClient</Name>
+      <Project>{56B60B89-791E-43D4-824E-7B73C1EE14F9}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASDLComponentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssigningWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuthenticationResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuthorityWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingAuthorityService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingComponentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingDataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingMetadataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingProxyAuthority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GatewayAuthority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InlineMetadataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAssigningService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAuthenticationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAuthorityService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDConfigurationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDDataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDMetadataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDRequestContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDSecurityService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDServerException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDServiceComponentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDServiceConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetadataWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MSDLComponentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NoSuchElementException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReallySimpleAssigningService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SerializableDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServiceComponentHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServiceConfigurationConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServiceRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleFANStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleFANStoreMetadataService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimpleResolutionService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SinmpleAuthority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SOAPEx_PublishViaMIME.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebServiceConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
