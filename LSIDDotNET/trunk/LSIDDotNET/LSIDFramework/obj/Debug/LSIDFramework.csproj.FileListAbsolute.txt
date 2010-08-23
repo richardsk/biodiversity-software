@@ -6,3 +6,11 @@ C:\Development\TDWG\LSID\LSIDDotNet\DotNETv35\LSIDFramework\bin\Debug\LSIDClient
 C:\Development\TDWG\LSID\LSIDDotNet\DotNETv35\LSIDFramework\obj\Debug\ResolveAssemblyReference.cache
 C:\Development\TDWG\LSID\LSIDDotNet\DotNETv35\LSIDFramework\obj\Debug\LSIDFramework.dll
 C:\Development\TDWG\LSID\LSIDDotNet\DotNETv35\LSIDFramework\obj\Debug\LSIDFramework.pdb
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\bin\Debug\LSIDFramework.dll
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\bin\Debug\LSIDFramework.pdb
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\bin\Debug\DNSResolver.dll
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\bin\Debug\LSIDClient.dll
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\bin\Debug\LSIDClient.pdb
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\obj\Debug\LSIDFramework.dll
+C:\Development\TDWG\LSID\LSIDDotNET\LSIDFramework\obj\Debug\LSIDFramework.pdb
