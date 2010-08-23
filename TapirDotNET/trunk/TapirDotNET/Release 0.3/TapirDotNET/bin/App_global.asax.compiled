@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/TapirDotNET/global.asax" hash="2a56779d" filehash="ffffe6e6f045a29a" flags="150000" assembly="App_global.asax" type="ASP.global_asax">
+    <filedeps>
+        <filedep name="/TapirDotNET/global.asax" />
+    </filedeps>
+</preserve>

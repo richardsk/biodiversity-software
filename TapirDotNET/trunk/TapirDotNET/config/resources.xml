@@ -1,0 +1,5 @@
+<resources>
+	<resource code="NZVHCHR" status="active" accesspoint="http://localhost/tapirdotnet/tapir.aspx/NZVHCHR" metadataFile="NZVHCHR_metadata.xml" configFile="NZVHCHR_config.xml" capabilitiesFile="NZVHCHR_capabilities.xml"/>
+	<resource code="sss" status="new" accesspoint="http://localhost/PATH_TO_WWW_DIR/tapir.aspx/sss" metadataFile="sss_metadata.xml" configFile="sss_config.xml"/>
+	<resource code="PlantNames" status="active" accesspoint="http://localhost/tapirdotnet/tapir.aspx/PlantNames" metadataFile="PlantNames_metadata.xml" configFile="PlantNames_config.xml" capabilitiesFile="PlantNames_capabilities.xml"/>
+</resources>

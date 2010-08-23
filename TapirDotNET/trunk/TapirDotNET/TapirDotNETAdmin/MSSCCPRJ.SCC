@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[TapirDotNETAdmin.csproj]
+SCC_Aux_Path = http://vault.landcareresearch.co.nz/VaultService|:5
+SCC_Project_Name = $/TDWG/TAPIR/TapirDotNET/TapirDotNETAdmin
