@@ -31,7 +31,7 @@ namespace AuthorityWebService
 
 			LSIDClient.LSIDLog.LogMessage("Web App Path : " + LSIDClient.Global.BinDirectory);
 
-			String configLocation = System.Configuration.ConfigurationSettings.AppSettings[LSIDFramework.ServiceConfigurationConstants.RSDL_LOCATION];
+			String configLocation = System.Configuration.ConfigurationManager.AppSettings[LSIDFramework.ServiceConfigurationConstants.RSDL_LOCATION];
 			String location = null;
 			if (configLocation == null) 
 			{
