@@ -1,12 +1,13 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TapirDotNET", "http://localhost/TapirDotNET", "{DE2600FB-3719-42B2-8C0B-83D5A260164E}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = ""
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
-		TargetFramework = "2.0"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
 		ProjectReferences = "{88934C83-3394-409F-877C-396062B944AF}|TapirDotNETClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/TapirDotNET"
 		Debug.AspNetCompiler.PhysicalPath = "TapirDotNET\"
@@ -31,7 +32,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TapirDotNETAdmin", "http://
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
-		TargetFramework = "2.0"
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
 		ProjectReferences = "{88934C83-3394-409F-877C-396062B944AF}|TapirDotNETClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/TapirDotNETAdmin"
 		Debug.AspNetCompiler.PhysicalPath = "TapirDotNETAdmin\"
