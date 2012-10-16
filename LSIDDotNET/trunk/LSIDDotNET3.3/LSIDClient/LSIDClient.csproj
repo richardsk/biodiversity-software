@@ -1,0 +1,387 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56B60B89-791E-43D4-824E-7B73C1EE14F9}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LSIDClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LSIDClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/LSIDClient/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DNSResolver">
+      <Name>DNSResolver</Name>
+      <HintPath>..\Include\DNSResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2">
+      <Name>Microsoft.Web.Services2</Name>
+      <HintPath>C:\Program Files\Microsoft WSE\v2.0\Microsoft.Web.Services2.dll</HintPath>
+      <AssemblyFolderKey>hklm\microsoft wse 2.0</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptedFormats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AsyncLSIDResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Caching.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enumeration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpiringResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FALSID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForeignAuthorities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ForeignAuthoritiesItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FTPLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FTPLocationImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FTPUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HostMapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HostMappings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HTTPConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HTTPLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HTTPResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HTTPUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IFTPLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImportMapChoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAssigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAuthority.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDAuthorityPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCacheException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCachingInputStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCachingInputStreamListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCredentialConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDCredentials.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDDataPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDDefaultPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDMetadataException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDMetadataFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDMetadataPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDPortFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDResolverConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDSoapTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDStandardPort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LSIDWSDLWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MalformedLSIDException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetadataResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetadataStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetadataStores.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Param.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pattern.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PortFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PortMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProducerConsumerBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Property.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResolutionAdapter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResolutionListener.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SoapConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SOAPLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SOAPUtils.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkerThread.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkPool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WSDLConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WsdlExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WSDLLocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XSLTMetadata.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XSLTMetadataFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <Content Include="Config\lsid-cache.xml" />
+    <Content Include="Config\lsid-client.xml" />
+    <Content Include="Config\lsid-credentials.xml" />
+    <EmbeddedResource Include="WSDL\LSIDAuthorityServiceHTTPBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDAuthorityServiceSOAPBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDDataServiceFileBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDDataServiceFTPBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDDataServiceHTTPBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDDataServiceSOAPBindings.wsdl" />
+    <EmbeddedResource Include="WSDL\LSIDPortTypes.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
