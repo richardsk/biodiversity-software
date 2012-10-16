@@ -27,6 +27,7 @@ namespace AuthorityWebService
 		
 		protected void Application_Start(Object sender, EventArgs e)
 		{
+            //NOTE IIS pool managed pipeline mode must be classic for the following code to work.
 			LSIDClient.Global.BinDirectory = System.IO.Path.GetDirectoryName(Context.Request.PhysicalApplicationPath) + "\\bin"; //.PhysicalPath
 
 			LSIDClient.LSIDLog.LogMessage("Web App Path : " + LSIDClient.Global.BinDirectory);
