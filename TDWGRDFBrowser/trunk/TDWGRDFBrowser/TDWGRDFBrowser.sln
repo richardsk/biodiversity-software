@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TDWGRDFBrowser", "TDWGRDFBrowser\TDWGRDFBrowser.vbproj", "{A55DF58B-C716-4460-A9AD-E38EBD9CFC3A}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataAccess", "DataAccess\DataAccess.vbproj", "{B8C2587B-9337-4470-85F3-E4DB8A2344DD}"
