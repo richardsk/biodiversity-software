@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="http://webServiceCDM1_20.webServicePkg.spice2_0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="urn:spice" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:intf="urn:spice" targetNamespace="urn:spice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://webServiceCDM1_20.webServicePkg.spice2_0">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:simpleType name="ReferenceType">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="LitRef" />
+          <xsd:enumeration value="Link" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="LitRef">
+        <xsd:sequence>
+          <xsd:element name="author" nillable="true" type="xsd:string" />
+          <xsd:element name="year" type="xsd:short" />
+          <xsd:element name="title" nillable="true" type="xsd:string" />
+          <xsd:element name="details" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Reference">
+        <xsd:sequence>
+          <xsd:element name="referenceType" nillable="true" type="tns1:ReferenceType" />
+          <xsd:element name="litRef" nillable="true" type="tns1:LitRef" />
+          <xsd:element name="link" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Place">
+        <xsd:sequence>
+          <xsd:element name="occurrence" nillable="true" type="xsd:string" />
+          <xsd:element name="placeName" nillable="true" type="xsd:string" />
+          <xsd:element name="reference" nillable="true" type="tns1:Reference" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Geography">
+        <xsd:sequence>
+          <xsd:element name="places" nillable="true" type="intf:ArrayOf_tns2_Place" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="NameType">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="FullName" />
+          <xsd:enumeration value="VirusName" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="InfraSpecificPortion">
+        <xsd:sequence>
+          <xsd:element name="InfraspecificMarker" nillable="true" type="xsd:string" />
+          <xsd:element name="infraspecificEpithet" nillable="true" type="xsd:string" />
+          <xsd:element name="authority" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FullName">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns1:Name">
+            <xsd:sequence>
+              <xsd:element name="authority" nillable="true" type="xsd:string" />
+              <xsd:element name="genus" nillable="true" type="xsd:string" />
+              <xsd:element name="specificEpithet" nillable="true" type="xsd:string" />
+              <xsd:element name="infraspecificPortion" nillable="true" type="tns1:InfraSpecificPortion" />
+              <xsd:element name="subgenera" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Name">
+        <xsd:sequence>
+          <xsd:element name="nameType" nillable="true" type="tns1:NameType" />
+          <xsd:element name="fullName" nillable="true" type="tns1:FullName" />
+          <xsd:element name="virusName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Status">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="accepted" />
+          <xsd:enumeration value="provisional" />
+          <xsd:enumeration value="synonym" />
+          <xsd:enumeration value="ambiguous" />
+          <xsd:enumeration value="misapplied" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Synonym">
+        <xsd:sequence>
+          <xsd:element name="name" nillable="true" type="tns1:Name" />
+          <xsd:element name="status" nillable="true" type="tns1:Status" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Occurrence">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="oNative" />
+          <xsd:enumeration value="introduced" />
+          <xsd:enumeration value="uncertain" />
+          <xsd:enumeration value="absent" />
+          <xsd:enumeration value="extinctt" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="NameWithAVCType">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="AVCName" />
+          <xsd:enumeration value="SynonymWithAVC" />
+          <xsd:enumeration value="CommonNameWithAVC" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="CommonName">
+        <xsd:sequence>
+          <xsd:element name="language" nillable="true" type="xsd:string" />
+          <xsd:element name="placeNames" nillable="true" type="intf:ArrayOf_xsd_string" />
+          <xsd:element name="vernName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommonNameWithAVC">
+        <xsd:sequence>
+          <xsd:element name="commonName" nillable="true" type="tns1:CommonName" />
+          <xsd:element name="AVCName" nillable="true" type="tns1:AVCName" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NameWithAVC">
+        <xsd:sequence>
+          <xsd:element name="nameWithAVCType" nillable="true" type="tns1:NameWithAVCType" />
+          <xsd:element name="avcName" nillable="true" type="tns1:AVCName" />
+          <xsd:element name="synonymWithAVC" nillable="true" type="tns1:SynonymWithAVC" />
+          <xsd:element name="commonNameWithAVC" nillable="true" type="tns1:CommonNameWithAVC" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AVCName">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns1:NameWithAVC">
+            <xsd:sequence>
+              <xsd:element name="name" nillable="true" type="tns1:Name" />
+              <xsd:element name="status" nillable="true" type="tns1:Status" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="SynonymWithAVC">
+        <xsd:sequence>
+          <xsd:element name="synonym" nillable="true" type="tns1:Synonym" />
+          <xsd:element name="AVCName" nillable="true" type="tns1:AVCName" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CommonNameWithRefs">
+        <xsd:sequence>
+          <xsd:element name="commonName" nillable="true" type="tns1:CommonName" />
+          <xsd:element name="references" nillable="true" type="intf:ArrayOf_tns2_Reference" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="RefType">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="NomenclaturalReference" />
+          <xsd:enumeration value="TaxonomicAcceptanceReference" />
+          <xsd:enumeration value="CommonNameReference" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="StatusRef">
+        <xsd:sequence>
+          <xsd:element name="reference" nillable="true" type="tns1:Reference" />
+          <xsd:element name="refType" nillable="true" type="tns1:RefType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="SearchType">
+        <xsd:restriction base="xsd:NMTOKEN">
+          <xsd:enumeration value="scientific" />
+          <xsd:enumeration value="virus" />
+          <xsd:enumeration value="vernacular" />
+          <xsd:enumeration value="unknown" />
+          <xsd:enumeration value="distinct" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Date">
+        <xsd:sequence>
+          <xsd:element name="day" type="xsd:short" />
+          <xsd:element name="month" type="xsd:short" />
+          <xsd:element name="year" type="xsd:short" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SpeciesName">
+        <xsd:sequence>
+          <xsd:element name="gsdIdentifier" nillable="true" type="xsd:string" />
+          <xsd:element name="identifier" nillable="true" type="xsd:string" />
+          <xsd:element name="nameWithAVC" nillable="true" type="tns1:NameWithAVC" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NameRefList">
+        <xsd:sequence>
+          <xsd:element name="statusRefs" nillable="true" type="intf:ArrayOf_tns2_StatusRef" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AVCNameWithRefs">
+        <xsd:sequence>
+          <xsd:element name="avcName" nillable="true" type="tns1:AVCName" />
+          <xsd:element name="nameRefList" nillable="true" type="tns1:NameRefList" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Scrutiny">
+        <xsd:sequence>
+          <xsd:element name="date" nillable="true" type="tns1:Date" />
+          <xsd:element name="link" nillable="true" type="xsd:string" />
+          <xsd:element name="person" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GSDInfo">
+        <xsd:sequence>
+          <xsd:element name="contactLink" nillable="true" type="xsd:string" />
+          <xsd:element name="date" nillable="true" type="tns1:Date" />
+          <xsd:element name="description" nillable="true" type="xsd:string" />
+          <xsd:element name="gsdIdentifier" nillable="true" type="xsd:string" />
+          <xsd:element name="gsdShortName" nillable="true" type="xsd:string" />
+          <xsd:element name="gsdTitle" nillable="true" type="xsd:string" />
+          <xsd:element name="homeLink" nillable="true" type="xsd:string" />
+          <xsd:element name="logoLink" nillable="true" type="xsd:string" />
+          <xsd:element name="searchLink" nillable="true" type="xsd:string" />
+          <xsd:element name="version" nillable="true" type="xsd:string" />
+          <xsd:element name="view" nillable="true" type="xsd:string" />
+          <xsd:element name="wrapperVersion" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SearchLimit">
+        <xsd:sequence>
+          <xsd:element name="gsdIdentifier" nillable="true" type="xsd:string" />
+          <xsd:element name="limit" type="xsd:int" />
+          <xsd:element name="skip" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SynonymWithRefs">
+        <xsd:sequence>
+          <xsd:element name="nameRefList" nillable="true" type="tns1:NameRefList" />
+          <xsd:element name="synonym" nillable="true" type="tns1:Synonym" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StandardData">
+        <xsd:sequence>
+          <xsd:element name="avcNameWithRefs" nillable="true" type="tns1:AVCNameWithRefs" />
+          <xsd:element name="comment" nillable="true" type="xsd:string" />
+          <xsd:element name="commonNameWithRefsList" nillable="true" type="intf:ArrayOf_tns2_CommonNameWithRefs" />
+          <xsd:element name="dataLink" nillable="true" type="intf:ArrayOf_xsd_string" />
+          <xsd:element name="family" nillable="true" type="xsd:string" />
+          <xsd:element name="geography" nillable="true" type="tns1:Geography" />
+          <xsd:element name="scrutiny" nillable="true" type="tns1:Scrutiny" />
+          <xsd:element name="synonymWithRefsList" nillable="true" type="intf:ArrayOf_tns2_SynonymWithRefs" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Type1Results">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:int" />
+          <xsd:element name="speciesNames" nillable="true" type="intf:ArrayOf_tns2_SpeciesName" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="HigherTaxon">
+        <xsd:sequence>
+          <xsd:element name="identifier" nillable="true" type="xsd:string" />
+          <xsd:element name="sourceGSD" nillable="true" type="xsd:string" />
+          <xsd:element name="hasChildren" nillable="true" type="xsd:boolean" />
+          <xsd:element name="rank" nillable="true" type="xsd:string" />
+          <xsd:element name="taxonName" nillable="true" type="xsd:string" />
+          <xsd:element name="authority" nillable="true" type="xsd:string" />
+          <xsd:element name="view" nillable="true" type="xsd:string" />
+          <xsd:element name="nameRefList" nillable="true" type="intf:ArrayOf_tns2_StatusRef" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Species">
+        <xsd:sequence>
+          <xsd:element name="identifier" nillable="true" type="xsd:string" />
+          <xsd:element name="sourceGSD" nillable="true" type="xsd:string" />
+          <xsd:element name="avcName" nillable="true" type="tns1:AVCName" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Taxon">
+        <xsd:sequence>
+          <xsd:element name="higherTaxon" nillable="true" type="tns1:HigherTaxon" />
+          <xsd:element name="species" nillable="true" type="tns1:Species" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CrossMapInfraSpecificPortion">
+        <xsd:sequence>
+          <xsd:element name="rank" nillable="true" type="xsd:string" />
+          <xsd:element name="infraspecific-name" nillable="true" type="xsd:string" />
+          <xsd:element name="authority" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Binomial">
+        <xsd:sequence>
+          <xsd:element name="genus" nillable="true" type="xsd:string" />
+          <xsd:element name="epithet" nillable="true" type="xsd:string" />
+          <xsd:element name="authority" nillable="true" type="xsd:string" />
+          <xsd:element name="crossMapInfraSpecificPortion" nillable="true" type="tns1:CrossMapInfraSpecificPortion" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CrossMapName">
+        <xsd:sequence>
+          <xsd:element name="authority" nillable="true" type="xsd:string" />
+          <xsd:element name="binomial" nillable="true" type="tns1:Binomial" />
+          <xsd:element name="higherTaxonName" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CrossMapTaxon">
+        <xsd:sequence>
+          <xsd:element name="crossMapName" nillable="true" type="tns1:CrossMapName" />
+          <xsd:element name="listId" nillable="true" type="xsd:string" />
+          <xsd:element name="taxonId" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Relationship">
+        <xsd:sequence>
+          <xsd:element name="crossMapTaxon" nillable="true" type="tns1:CrossMapTaxon" />
+          <xsd:element name="relationship-type" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Item">
+        <xsd:sequence>
+          <xsd:element name="crossMapTaxon" nillable="true" type="tns1:CrossMapTaxon" />
+          <xsd:element name="relationship" nillable="true" type="intf:ArrayOf_tns1_Relationship" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CrossMap">
+        <xsd:sequence>
+          <xsd:element name="item" nillable="true" type="intf:ArrayOf_tns1_Item" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:spice">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns2_Place">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Place[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_Reference">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Reference[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_StatusRef">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:StatusRef[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_CommonNameWithRefs">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:CommonNameWithRefs[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_SynonymWithRefs">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SynonymWithRefs[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_SpeciesName">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:SpeciesName[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_GSDInfo">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:GSDInfo[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns2_Taxon">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Taxon[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Relationship">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Relationship[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Item">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Item[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="type1WrapperTestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:SearchType" />
+    <wsdl:part name="in2" type="tns1:SearchLimit" />
+    <wsdl:part name="in3" type="xsd:string" />
+    <wsdl:part name="in4" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType3RequestResponse">
+    <wsdl:part name="satisfyType3RequestReturn" type="intf:ArrayOf_tns2_GSDInfo" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType0RequestRequest" />
+  <wsdl:message name="getHubIdentifiersRequest" />
+  <wsdl:message name="satisfyType2RequestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+    <wsdl:part name="in3" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getCrossMapMatchesResponse">
+    <wsdl:part name="getCrossMapMatchesResponse" type="tns1:CrossMap" />
+  </wsdl:message>
+  <wsdl:message name="webServiceTestResponse">
+    <wsdl:part name="webServiceTestReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType5RequestResponse">
+    <wsdl:part name="satisfyType5RequestReturn" type="intf:ArrayOf_tns2_Taxon" />
+  </wsdl:message>
+  <wsdl:message name="getCrossMapMatchesRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="webServiceTestRequest" />
+  <wsdl:message name="satisfyType1RequestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:SearchType" />
+    <wsdl:part name="in2" type="tns1:SearchLimit" />
+    <wsdl:part name="in3" type="xsd:string" />
+    <wsdl:part name="in4" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="type1WrapperTestResponse">
+    <wsdl:part name="type1WrapperTestReturn" type="tns1:Type1Results" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType4RequestResponse">
+    <wsdl:part name="satisfyType4RequestReturn" type="intf:ArrayOf_tns2_Taxon" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType2RequestResponse">
+    <wsdl:part name="satisfyType2RequestReturn" type="tns1:StandardData" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType3RequestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getHubIdentifiersResponse">
+    <wsdl:part name="getHubIdentifiersResponse" type="intf:ArrayOf_xsd_string" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType4RequestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+    <wsdl:part name="in3" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType5RequestRequest">
+    <wsdl:part name="in0" type="xsd:string" />
+    <wsdl:part name="in1" type="tns1:SearchLimit" />
+    <wsdl:part name="in2" type="xsd:string" />
+    <wsdl:part name="in3" type="xsd:string" />
+    <wsdl:part name="in4" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType0RequestResponse">
+    <wsdl:part name="satisfyType0RequestReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="satisfyType1RequestResponse">
+    <wsdl:part name="satisfyType1RequestReturn" type="tns1:Type1Results" />
+  </wsdl:message>
+  <wsdl:portType name="CASWebService">
+    <wsdl:operation name="webServiceTest">
+      <wsdl:input name="webServiceTestRequest" message="intf:webServiceTestRequest" />
+      <wsdl:output name="webServiceTestResponse" message="intf:webServiceTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType0Request">
+      <wsdl:input name="satisfyType0RequestRequest" message="intf:satisfyType0RequestRequest" />
+      <wsdl:output name="satisfyType0RequestResponse" message="intf:satisfyType0RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType1Request" parameterOrder="in0 in1 in2 in3 in4">
+      <wsdl:input name="satisfyType1RequestRequest" message="intf:satisfyType1RequestRequest" />
+      <wsdl:output name="satisfyType1RequestResponse" message="intf:satisfyType1RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="type1WrapperTest" parameterOrder="in0 in1 in2 in3 in4">
+      <wsdl:input name="type1WrapperTestRequest" message="intf:type1WrapperTestRequest" />
+      <wsdl:output name="type1WrapperTestResponse" message="intf:type1WrapperTestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType2Request" parameterOrder="in0 in1 in2 in3">
+      <wsdl:input name="satisfyType2RequestRequest" message="intf:satisfyType2RequestRequest" />
+      <wsdl:output name="satisfyType2RequestResponse" message="intf:satisfyType2RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType3Request" parameterOrder="in0 in1 in2">
+      <wsdl:input name="satisfyType3RequestRequest" message="intf:satisfyType3RequestRequest" />
+      <wsdl:output name="satisfyType3RequestResponse" message="intf:satisfyType3RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType4Request" parameterOrder="in0 in1 in2 in3">
+      <wsdl:input name="satisfyType4RequestRequest" message="intf:satisfyType4RequestRequest" />
+      <wsdl:output name="satisfyType4RequestResponse" message="intf:satisfyType4RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType5Request" parameterOrder="in0 in1 in2 in3 in4">
+      <wsdl:input name="satisfyType5RequestRequest" message="intf:satisfyType5RequestRequest" />
+      <wsdl:output name="satisfyType5RequestResponse" message="intf:satisfyType5RequestResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getHubIdentifiers">
+      <wsdl:input name="getHubIdentifiersRequest" message="intf:getHubIdentifiersRequest" />
+      <wsdl:output name="getHubIdentifiersResponse" message="intf:getHubIdentifiersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCrossMapMatches" parameterOrder="in0 in1 in2">
+      <wsdl:input name="getCrossMapMatchesRequest" message="intf:getCrossMapMatchesRequest" />
+      <wsdl:output name="getCrossMapMatchesResponse" message="intf:getCrossMapMatchesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CASWebServiceSoapBinding" type="intf:CASWebService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="webServiceTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="webServiceTestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="webServiceTestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType0Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType0RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType0RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType1Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType1RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType1RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="type1WrapperTest">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="type1WrapperTestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="type1WrapperTestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType2Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType2RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType2RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType3Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType3RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType3RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType4Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType4RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType4RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="satisfyType5Request">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="satisfyType5RequestRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="satisfyType5RequestResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHubIdentifiers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getHubIdentifiersRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getHubIdentifiersResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCrossMapMatches">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCrossMapMatchesRequest">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getCrossMapMatchesResponse">
+        <wsdlsoap:body use="encoded" namespace="urn:spice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CASWebServiceService">
+    <wsdl:port name="CASWebService" binding="intf:CASWebServiceSoapBinding">
+      <wsdlsoap:address location="http://appc22.rdg.ac.uk/SPICE/services/CASWebService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
