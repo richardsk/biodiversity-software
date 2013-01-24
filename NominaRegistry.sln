@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "NominaDB", "NominaDB\NominaDB.dbp", "{B4ABB717-0A55-4C40-9D3E-56BABA38E042}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NominaRegistryService", "NominaRegistryService\NominaRegistryService.vbproj", "{C4F1A163-E785-4AD7-994F-D7C172235A4C}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NominaDataAccess", "NominaDataAccess\NominaDataAccess.vbproj", "{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\NominaWeb\", "NominaWeb", "{8451B570-2F92-4A9D-9005-04D09436F5B2}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/Nomina"
+		SccAuxPath = ""
+		SccLocalPath = ".."
+		SccProvider = "MSSCCI:SourceGear Vault Client"
+		Debug.AspNetCompiler.VirtualPath = "/NominaWeb"
+		Debug.AspNetCompiler.PhysicalPath = "NominaWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\NominaWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/NominaWeb"
+		Release.AspNetCompiler.PhysicalPath = "NominaWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\NominaWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1417"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = NominaDataAccess\\NominaDataAccess.vbproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = NominaDataAccess\\
+		SccProjectUniqueName2 = NominaDB\\NominaDB.dbp
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = NominaDB\\
+		SccProjectUniqueName3 = NominaRegistryService\\NominaRegistryService.vbproj
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = NominaRegistryService\\
+		SccWebProject4 = true
+		SccProjectUniqueName4 = NominaWeb
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = NominaWeb\\
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Release|.NET.ActiveCfg = Release|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4F1A163-E785-4AD7-994F-D7C172235A4C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Release|.NET.ActiveCfg = Release|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6FAAF9D0-01DD-4139-BD62-DF9CD7EA919D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Debug|.NET.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Debug|.NET.Build.0 = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Debug|Any CPU.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Debug|Mixed Platforms.Build.0 = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Release|.NET.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Release|.NET.Build.0 = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Release|Any CPU.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
+		{8451B570-2F92-4A9D-9005-04D09436F5B2}.Release|Mixed Platforms.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

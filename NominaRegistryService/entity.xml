@@ -1,0 +1,18 @@
+<relatedEntity>
+	<role>[role]</role>
+	<entity>
+		<name xml:lang="en">[name]</name>
+		<identifier>[identifier]</identifier>
+		<acronym>[acronym]</acronym>
+		<logoURL>[logo_url]</logoURL>
+		<description xml:lang="en">[description]</description>
+		<address>[address]</address>
+		<geo:Point>
+			<geo:lat>[latitude]</geo:lat>
+			<geo:long>[longitude]</geo:long>
+		</geo:Point>
+		<relatedInformation>[related_information]</relatedInformation>
+
+		[contacts]
+	</entity>
+</relatedEntity>

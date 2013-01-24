@@ -1,0 +1,1 @@
+<%@ WebService Language="VB" CodeBehind="Registry.asmx.vb" Class="NominaRegistryService.ProviderRegistry" %>

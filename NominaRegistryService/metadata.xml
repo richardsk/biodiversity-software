@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<metadata xmlns="http://net.gni/metadata/0.1a" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://net.gni/metadata/0.1a http://you-are-joking/right.xsd">	
+	<dc:title xml:lang="en">[title]</dc:title>
+	<dc:description xml:lang="en">[description]</dc:description>
+	<logoURL>[logo_url]</logoURL>
+	<dc:rights xml:lang="en">[rights]</dc:rights>
+	<citation xml:lang="en">[citation]</citation>
+	<metadataURL>[metadata_url]</metadataURL>
+	<endpointURL>[endpoint_url]</endpointURL>
+	<dataURI>[data_uri]</dataURI>
+	<dataURIType>[data_uri_type]</dataURIType>
+	<responseFormat>[response_format]</responseFormat>
+	<refreshPeriodHours>[refresh_period]</refreshPeriodHours>
+	<taxonomicScope>[taxonomic_scope]</taxonomicScope>
+	<GeospatialScopeWKT>[geospatial_scope]</GeospatialScopeWKT>
+	[related_entities]
+	<accessionRules>
+     [accession_rules]
+	</accessionRules>
+	<!-- This is the timestamp the index file was last generated -->
+	<dct:modified>[modified_timestamp]</dct:modified>
+</metadata>
