@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://nomina.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://nomina.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://nomina.org/">
+      <s:element name="ListProviders">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListProvidersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListProvidersResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="providerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProviderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProviderResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProvider">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securityToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="providerXml">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProviderResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListProvidersSoapIn">
+    <wsdl:part name="parameters" element="tns:ListProviders" />
+  </wsdl:message>
+  <wsdl:message name="ListProvidersSoapOut">
+    <wsdl:part name="parameters" element="tns:ListProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProvider" />
+  </wsdl:message>
+  <wsdl:message name="GetProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProviderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProvider" />
+  </wsdl:message>
+  <wsdl:message name="AddProviderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProviderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProviderRegistrySoap">
+    <wsdl:operation name="ListProviders">
+      <wsdl:input message="tns:ListProvidersSoapIn" />
+      <wsdl:output message="tns:ListProvidersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProvider">
+      <wsdl:input message="tns:GetProviderSoapIn" />
+      <wsdl:output message="tns:GetProviderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProvider">
+      <wsdl:input message="tns:AddProviderSoapIn" />
+      <wsdl:output message="tns:AddProviderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProviderRegistrySoap" type="tns:ProviderRegistrySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListProviders">
+      <soap:operation soapAction="http://nomina.org/ListProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvider">
+      <soap:operation soapAction="http://nomina.org/GetProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProvider">
+      <soap:operation soapAction="http://nomina.org/AddProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProviderRegistrySoap12" type="tns:ProviderRegistrySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListProviders">
+      <soap12:operation soapAction="http://nomina.org/ListProviders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProvider">
+      <soap12:operation soapAction="http://nomina.org/GetProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProvider">
+      <soap12:operation soapAction="http://nomina.org/AddProvider" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProviderRegistry">
+    <wsdl:port name="ProviderRegistrySoap" binding="tns:ProviderRegistrySoap">
+      <soap:address location="http://localhost:1534/Registry.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProviderRegistrySoap12" binding="tns:ProviderRegistrySoap12">
+      <soap12:address location="http://localhost:1534/Registry.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

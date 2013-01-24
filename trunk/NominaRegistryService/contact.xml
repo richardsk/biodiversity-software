@@ -1,0 +1,8 @@
+<hasContact>
+	<role>[role]</role>
+	<vcard:VCARD>
+		<vcard:FN>[vcard_fn]</vcard:FN>
+		<vcard:TITLE xml:lang="en">[vcard_title]</vcard:TITLE>
+		<vcard:EMAIL>[vcard_email]</vcard:EMAIL>
+	</vcard:VCARD>
+</hasContact>
