@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TaxonBlasterWeb", "http://localhost:29019", "{6589BB04-0A44-4223-B294-57A6E361B7C0}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_29019"
+		Debug.AspNetCompiler.PhysicalPath = "TaxonBlasterWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29019\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_29019"
+		Release.AspNetCompiler.PhysicalPath = "TaxonBlasterWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29019\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "TaxonBlasterWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxonBlasterRest", "TaxonBlasterRest\TaxonBlasterRest.csproj", "{45766257-5394-4F6E-8B6F-9938EDF8F3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxonBlasterUI", "TaxonBlasterUI\TaxonBlasterUI.csproj", "{E07284D8-7BD2-4AB2-949F-56E37F95DA66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxonBlaster", "TaxonBlaster\TaxonBlaster.csproj", "{429779EA-47E8-4939-84BD-BEBCEF85D742}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6589BB04-0A44-4223-B294-57A6E361B7C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6589BB04-0A44-4223-B294-57A6E361B7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6589BB04-0A44-4223-B294-57A6E361B7C0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6589BB04-0A44-4223-B294-57A6E361B7C0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{45766257-5394-4F6E-8B6F-9938EDF8F3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45766257-5394-4F6E-8B6F-9938EDF8F3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45766257-5394-4F6E-8B6F-9938EDF8F3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45766257-5394-4F6E-8B6F-9938EDF8F3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E07284D8-7BD2-4AB2-949F-56E37F95DA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E07284D8-7BD2-4AB2-949F-56E37F95DA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E07284D8-7BD2-4AB2-949F-56E37F95DA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E07284D8-7BD2-4AB2-949F-56E37F95DA66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429779EA-47E8-4939-84BD-BEBCEF85D742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429779EA-47E8-4939-84BD-BEBCEF85D742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429779EA-47E8-4939-84BD-BEBCEF85D742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429779EA-47E8-4939-84BD-BEBCEF85D742}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="http://localhost:29839/Scripts/jquery-1.8.2.js"></script>
+    </head>
+    <script>
+        function SubmitSequences() {
+            var val = $("#geneText").text();
+            $.post("http://localhost:29839/api/Blaster", { value: val }).done(
+                function (data) {
+                    $("#statusText").val("Submitted sequence.  RID = " + data + "\r\n" + "Waiting for response...");
+
+                    pollSubmission(data);
+                });
+        }
+        
+        function pollSubmission(rid) {
+            $.get("http://localhost:29839/api/Blaster/Poll/" + rid, function (data) {
+                //if got results then end
+                alert(data);
+                setTimeout(pollSubmission(data), 5000);
+            });
+        }
+    </script>
+    <body>
+        <section id="wrapper">
+            <header>
+                <h1>Taxon Blaster</h1>
+            </header>
+            
+            <p>Enter gene sequence <textarea id="geneText" name="geneTextBlock" cols="75" rows="10"></textarea></p>
+            <p>
+                <input type="button" name="sendButton" value="Send" onclick="SubmitSequences();" />
+            </p>
+            <br/>
+            <section>
+                <textarea id="statusText" readonly="readonly" cols="75" rows="4"></textarea>
+            </section>
+        </section>
+    </body>
+</html>
