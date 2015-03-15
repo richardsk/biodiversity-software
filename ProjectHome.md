@@ -1,0 +1,1 @@
+Biodiversity software for taxonomic names, concpets, specimens, observations, and related data. Coordinates with any TDWG standards development (http://www.tdwg.org).
